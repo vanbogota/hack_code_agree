@@ -1,10 +1,11 @@
+'use client';
 import { useState } from 'react';
 import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Logo } from '../Logo/Logo';
 import { useUIStore } from '../../store/ui';
 import { AuthForm } from '../Forms/Auth';
-import { Button } from '../Button/Button';
+import { Button } from '@/components/button';
 
 const navigation = [
   { name: 'Категория 1', href: '#' },
@@ -31,8 +32,9 @@ export const Header = () => {
         <div className="flex lg:hidden">
           <div className="flex lg:hidden lg:flex-1 lg:justify-end">
             <Button
+              color="orange"
               onClick={() => handleModalToggle()}
-              className="rounded-md bg-gray-600 px-3 py-2 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
+              className="rounded-md bg-gray-400 px-3 py-2 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
             >
               Войти &rarr;
             </Button>
@@ -60,7 +62,8 @@ export const Header = () => {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Button
             onClick={() => handleModalToggle()}
-            className="rounded-md bg-gray-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
+            color="orange"
+            className="rounded-md bg-gray-400 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
           >
             Войти &rarr;
           </Button>
@@ -106,7 +109,7 @@ export const Header = () => {
         </DialogPanel>
       </Dialog> */}
 
-      <Dialog open={isModalAuthOpen} onClose={() => setModalAuthOpen(false)} className="z-8000 relative">
+      <Dialog open={isModalAuthOpen} onClose={() => setModalAuthOpen(false)} className="relative z-8000">
         <DialogBackdrop
           transition
           className="fixed inset-0 bg-gray-700 bg-opacity-75 transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in"

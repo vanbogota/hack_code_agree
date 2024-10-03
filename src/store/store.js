@@ -21,9 +21,11 @@ export const useAuthStore = create(
         });
         if (!response.ok) throw response;
         set({ loginInfo: await response.json() });
+        localStorage.setItem('login-test', JSON.stringify(info.username));
       } catch (e) {
         let error = e;
         console.log(error);
+
         set({ errorAuth: 'Error' });
         error = await e.json();
         set({ errorAuth: error });

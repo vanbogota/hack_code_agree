@@ -1,6 +1,7 @@
+'use client';
 import clsx from 'clsx';
 import { useAuthStore } from '../../store/store';
-import { Button } from '../Button/Button';
+import { Button } from '@/components/button';
 import { LoadingIcon } from '../icons/LoadingIcon';
 
 export const AuthForm = () => {

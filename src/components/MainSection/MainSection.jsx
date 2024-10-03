@@ -1,4 +1,4 @@
-import { useState } from 'react';
+'use client';
 
 export const MainSection = () => {
   return (

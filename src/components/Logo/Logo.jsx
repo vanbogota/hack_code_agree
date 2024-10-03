@@ -1,3 +1,4 @@
+'use client';
 import { NAME_APP } from '../../constants';
 
 export const Logo = () => {
