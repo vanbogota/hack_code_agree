@@ -18,7 +18,7 @@ export const MainSection = () => {
             <h1 className="text-3xl font-bold tracking-tight text-white sm:text-6xl">
               Проанализируем и определим <br className="block lg:hidden" />
               <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-                какие страховые
+                ваши страховые продукты
               </span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
