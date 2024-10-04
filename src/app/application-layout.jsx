@@ -49,7 +49,7 @@ function AccountDropdownMenu({ anchor }) {
       <DropdownDivider />
       <DropdownItem onClick={logout}>
         <ArrowRightStartOnRectangleIcon />
-        <DropdownLabel>Выйтsи</DropdownLabel>
+        <DropdownLabel>Выйти</DropdownLabel>
       </DropdownItem>
     </DropdownMenu>
   );
@@ -85,7 +85,16 @@ export function ApplicationLayout({ children }) {
             <SidebarSection>
               <SidebarItem href="/" current={pathname === '/'}>
                 <HomeIcon />
-                <SidebarLabel>Главное</SidebarLabel>
+                <SidebarLabel>Главная</SidebarLabel>
+              </SidebarItem>
+              <SidebarItem href="/" current={pathname === '/'}>
+                <SidebarLabel>Продукты</SidebarLabel>
+              </SidebarItem>
+              <SidebarItem href="/" current={pathname === '/'}>
+                <SidebarLabel>Гипотезы</SidebarLabel>
+              </SidebarItem>
+              <SidebarItem href="/" current={pathname === '/'}>
+                <SidebarLabel>Создать страховку</SidebarLabel>
               </SidebarItem>
             </SidebarSection>
 
